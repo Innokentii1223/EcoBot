@@ -16,16 +16,19 @@ async def on_message(message):
     if message.author == client.user:
         return
     if message.content.startswith('Что делать с использованой батарейкой'):
-        with open('eco/7f2eeac26d68474f02ef41b17969816b.jpg', 'rb') as f:
+        with open('7f2eeac26d68474f02ef41b17969816b.jpg', 'rb') as f:
             p = discord.File(f)
             await message.channel.send(file=p)
     elif message.content.startswith('Что делать с отходами'):
-        with open('eco/3569c551fdaba27f4f47bbd06c5b7cf1.jpg', 'rb') as f1:
+        with open('3569c551fdaba27f4f47bbd06c5b7cf1.jpg', 'rb') as f1:
             pi = discord.File(f1)
             await message.channel.send(file=pi)
+    elif message.content.startswith('Что делать с использованой бумагой'):
+        with open('f12b009fb82807fc66a8f569c83b2059.jpg', 'rb') as f2:
+            pit = discord.File(f2)
+            await message.channel.send(file=pit)
 
-client.run('token')
 
-
+client.run('MTExMzQ4NzM5MjE0NjQ3MzAzMA.Gcg33f.V2vFPOc3m33rmAEM8JMMqH1lB2kH5RvBh7HcvA')
 
 

@@ -29,6 +29,6 @@ async def on_message(message):
             await message.channel.send(file=pit)
 
 
-client.run('MTExMzQ4NzM5MjE0NjQ3MzAzMA.Gcg33f.V2vFPOc3m33rmAEM8JMMqH1lB2kH5RvBh7HcvA')
+client.run('token')
 
 

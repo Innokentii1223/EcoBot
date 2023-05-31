@@ -1,0 +1,31 @@
+import discord
+intents = discord.Intents.default()
+
+intents.message_content = True
+
+client = discord.Client(command_prefix='', intents=discord.Intents.default())
+
+
+@client.event
+async def on_ready():
+    print(f'We have logged in as {client.user}')
+
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+    if message.content.startswith('Что делать с использованой батарейкой'):
+        with open('eco/7f2eeac26d68474f02ef41b17969816b.jpg', 'rb') as f:
+            p = discord.File(f)
+            await message.channel.send(file=p)
+    elif message.content.startswith('Что делать с отходами'):
+        with open('eco/3569c551fdaba27f4f47bbd06c5b7cf1.jpg', 'rb') as f1:
+            pi = discord.File(f1)
+            await message.channel.send(file=pi)
+
+client.run('token')
+
+
+
+
